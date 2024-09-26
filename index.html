@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../styles.css" />
     <title>JavaScript Background Color Switcher</title>
   </head>
   <body>
@@ -38,6 +37,29 @@
         <span>to change the background color of this page!</span>
       </h2>
     </div>
-    <script src="chaiaurcode.js"></script>
+    <script>
+      const buttons = document.querySelectorAll('.button');
+const body = document.querySelector("body");
+
+buttons.forEach(function(button){
+    console.log(button);
+    button.addEventListener('click', function(e){
+        console.log(e.target);
+        if (e.target.id === 'grey') {
+            body.style.backgroundColor = e.target.id;
+          }
+          if (e.target.id === 'white') {
+            body.style.backgroundColor = e.target.id;
+          }
+          if (e.target.id === 'blue') {
+            body.style.backgroundColor = e.target.id;
+          }
+          if (e.target.id === 'yellow') {
+            body.style.backgroundColor = e.target.id;
+          }
+          
+        });
+      });
+    </script>
   </body>
 </html>
